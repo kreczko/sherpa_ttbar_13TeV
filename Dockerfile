@@ -13,8 +13,6 @@ RUN yum history sync \
         wget \
  &&  rm -fr /var/cache
 
-ENV RUN_DAT /data/Run.dat_ttbar_13TeV
-COPY Run.dat_ttbar_13TeV ${RUN_DAT}
 COPY run.sh /scripts/run.sh
 
 ENV OUTPUT_DIR /output
@@ -28,6 +26,9 @@ ARG USERID=1000
 RUN adduser -u ${USERID} ${USERNAME} && \
   echo "${USERNAME} ALL=(root) NOPASSWD:ALL" > /etc/sudoers.d/${USERNAME} && \
   chmod 0440 /etc/sudoers.d/${USERNAME}
+
+ENV RUN_DAT /data/Run.dat_ttbar_13TeV
+COPY Run.dat_ttbar_13TeV ${RUN_DAT}
 
 USER cms
 ENV HOME /home/${USERNAME}
