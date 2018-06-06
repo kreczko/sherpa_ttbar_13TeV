@@ -28,7 +28,9 @@ RUN adduser -u ${USERID} ${USERNAME} && \
   chmod 0440 /etc/sudoers.d/${USERNAME}
 
 ENV RUN_DAT /data/Run.dat_ttbar_13TeV
+ENV MAKE_LIBS_SCRIPT /data/MakeSherpaLibs.sh
 COPY Run.dat_ttbar_13TeV ${RUN_DAT}
+COPY MakeSherpaLibs.sh ${MAKE_LIBS_SCRIPT}
 
 USER cms
 ENV HOME /home/${USERNAME}

@@ -16,4 +16,5 @@ mkdir -p workdir/python
 cd workdir/test
 cp $TOPDIR/GeneratorInterface/SherpaInterface/data/*SherpaLibs.sh .
 cp ${RUN_DAT} .
+cp ${MAKE_LIBS_SCRIPT} .
 time ./MakeSherpaLibs.sh -p ttbar_13TeV -o LBCR -v -m mpirun -M "-n ${NUMBER_OF_CORES}" | tee sherpa_ttbar_13TeV.log
