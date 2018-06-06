@@ -1,9 +1,9 @@
 DOCKER=docker
 
 build:
-	$(DOCKER) build -t kreczko/sherpa:ttbar_13TeV .
+	$(DOCKER) build -t ${DOCKERHUB_USER}/sherpa:ttbar_13TeV .
 
 push:
-	docker push kreczko/sherpa:ttbar_13TeV
+	docker push ${DOCKERHUB_USER}/sherpa:ttbar_13TeV
 
 .PHONY : build
