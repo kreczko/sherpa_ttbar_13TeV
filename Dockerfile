@@ -32,6 +32,7 @@ COPY Run.dat_ttbar_13TeV ${RUN_DAT}
 
 USER cms
 ENV HOME /home/${USERNAME}
+ENV NEVTS 0
 
 ENTRYPOINT sudo /usr/bin/cubied \
         && echo "Starting CMS Sherpa container" \
