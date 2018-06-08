@@ -10,7 +10,8 @@
 
   % tags for process setup
   % only 3 additional jets instead of 4
-  NJET:=4; LJET:=2,3; QCUT:=20.;
+  % NJET:=4; LJET:=2,3; QCUT:=20.;
+  NJET:=2; LJET:=2,3,4; QCUT:=20.;
 
   % me generator settings
   ME_SIGNAL_GENERATOR Comix Amegic LOOPGEN;

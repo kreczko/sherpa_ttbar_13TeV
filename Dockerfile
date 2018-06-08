@@ -34,7 +34,7 @@ COPY MakeSherpaLibs.sh ${MAKE_LIBS_SCRIPT}
 
 USER cms
 ENV HOME /home/${USERNAME}
-ENV NEVTS 0
+ENV NEVTS 1
 
 ENTRYPOINT sudo /usr/bin/cubied \
         && echo "Starting CMS Sherpa container" \
