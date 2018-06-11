@@ -16,5 +16,5 @@ make push
 
 # run
 ```
-docker run --rm -t -d --name sherpa_ttbar_13TeV -e NUMBER_OF_CORES=42 -v <path to output on host>/:/output --privileged kreczko/sherpa:ttbar_13TeV
+docker run --rm -t -d --name sherpa_ttbar_13TeV -e NEVTS=1 -e NUMBER_OF_CORES=42 -v <path to output on host>/:/output --privileged kreczko/sherpa:ttbar_13TeV
 ```
